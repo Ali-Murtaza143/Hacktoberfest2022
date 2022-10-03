@@ -1,26 +1,32 @@
-var num=4;
+var a=5;
 
 
 function myFunc1()
 {
    
-   if(num==1)
+   if(a==1)
    {
    var VText=document.getElementById('ChangeText').value;
    document.getElementById('paragrapgh').innerHTML=VText;
    }
-else if(num==2)
+else if(a==2)
+{
+alert("very Good");
+
+}
+
+else if(a==4)
 {
 alert("Good");
 
 }
 
-else if(num==4)
+   
+   else if(a==5)
 {
-alert("Good");
+alert("bad");
 
 }
-
 
 else
 {
