@@ -1,9 +1,9 @@
 
 
-function changeThetext1()
+function changeThetext2()
 {
 //change the paragraph text
-document.getElementById('paragraph1').innerHTML='changing the text';
+document.getElementById('paragraph2').innerHTML='changing the text';
 
 
 
