@@ -1,14 +1,14 @@
-var vNum=100;
-var vName='Ali';
-var vNum2=200;
-var vName2='Murtaza';
+var Num=100;
+var Name='Ali';
+var Num2=200;
+var Name2='Murtaza';
 
 
 function myFunc1()
 {
-   var VText=document.getElementById('ChangeText').value;
+   var Text=document.getElementById('ChangeText').value;
 
-document.getElementById('paragrapgh').innerHTML=VText;
+document.getElementById('paragrapgh').innerHTML=Text;
 
 
 }
