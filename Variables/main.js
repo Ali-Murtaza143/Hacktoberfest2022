@@ -1,13 +1,13 @@
-var vNum=100;
-var vName='Ali';
+var num1=100;
+var name1='Ali';
 
 
 
-function myFunc1()
+function addFuc()
 {
     alert('pop');
 
-document.getElementById('paragrapgh').innerHTML=vName;
+document.getElementById('sentences').innerHTML=name1;
 
 
 }
