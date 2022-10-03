@@ -1,7 +1,7 @@
 var vNum=100;
 var vName='Ali';
-var vNum2=200;
-var vName2='Murtaza';
+var vNum2=30;
+var vName2='Murtaza bozdar';
 
 
 function myFunc1()
