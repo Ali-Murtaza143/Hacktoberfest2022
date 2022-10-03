@@ -1,6 +1,8 @@
+// Declaring a variable 'a'
 var a=5;
 
 
+// creating a function named myFunct1()
 function myFunc1()
 {
    
@@ -11,13 +13,13 @@ function myFunc1()
    }
 else if(a==2)
 {
-alert("very Good");
+alert("Excellent"); // changed the value from 'Very Good'
 
 }
 
 else if(a==4)
 {
-alert("Good");
+alert("Average"); // changed the value from 'Good'
 
 }
 
