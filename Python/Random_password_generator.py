@@ -2,10 +2,9 @@
 import random
 import string 
 
-lower_letters = list(string.ascii_lowercase)
-upper_letters = list(string.ascii_uppercase)
-both_letters = (upper_letters + lower_letters)
-
+lower = list(string.ascii_lowercase)
+upper = list(string.ascii_uppercase)
+both = (upper + lower)
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
@@ -31,19 +30,23 @@ numbers_pass=[]
 
 for x in range(nr_letters):
     if case == 'l':
-        letters_pass += random.choice(lower_letters)
+        random.shuffle(lower)
+        letters_pass += random.choice(lower)
     elif case == 'u':
-        letters_pass += random.choice(upper_letters)
+        random.shuffle(upper)
+        letters_pass += random.choice(upper)
     else:
-        random.shuffle(both_letters)
-        letters_pass += random.choice(both_letters)
+        random.shuffle(both)
+        letters_pass += random.choice(both)
    
   
 for y in range(nr_symbols):
-  symbols_pass += random.choice(symbols)
+    random.shuffle(symbols)
+    symbols_pass += random.choice(symbols)
   
 for z in range(nr_numbers):
-  numbers_pass+= random.choice(numbers)
+    random.shuffle(numbers)
+    numbers_pass+= random.choice(numbers)
 
 password=letters_pass+symbols_pass+numbers_pass
 
