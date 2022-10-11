@@ -13,27 +13,27 @@ function myFunc1()
    }
 else if(a==2)
 {
-alert("Excellent"); // changed the value from 'Very Good'
+alert("Best Case"); // changed the value from 'Very Good'
 
 }
 
 else if(a==4)
 {
-alert("Average"); // changed the value from 'Good'
+alert("Average Case"); // changed the value from 'Good'
 
 }
 
    
    else if(a==5)
 {
-alert("bad");
+alert("Worst Case");
 
 }
 
 else
 {
 
-   var VText="Hello world";
+   var VText="Hello World";
    document.getElementById('paragrapgh').innerHTML=VText;
 
 

@@ -25,6 +25,10 @@ All the best.
 
 
 <h3>Ali Murtaza </h3> 
+<h3>bozdar </h3> 
+<h3>hacktoberfest </h3> 
+<h3>hacktoberfest-accepted</h3> 
+
 
 
 (# Hacktoberfest2022)
