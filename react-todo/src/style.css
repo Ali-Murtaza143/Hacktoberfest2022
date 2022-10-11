@@ -1,0 +1,29 @@
+body {
+    background: #333945;  
+}
+
+h1{
+    color: beige;
+    font-family: monospace;
+    font-size: 30pt;
+}
+
+.todo_div{
+    text-align: center;
+}
+
+.txt_username {
+    padding: 8px;
+}
+
+.button {
+    background-color: #26ae60;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10pt;
+    margin: 10pt 10pt;
+}
