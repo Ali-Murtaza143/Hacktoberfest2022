@@ -1,0 +1,68 @@
+import java.util.*;
+import java.text.DecimalFormat;
+ 
+public class Currencyconverter
+{
+   public static void main(String[] args)
+   {
+      double amount;
+      double dollar, pound;
+      int choice;
+ 
+      DecimalFormat f = new DecimalFormat("##.##");
+ 
+      Scanner sc = new Scanner(System.in);
+ 
+      System.out.println("Following are the Choices:");
+      System.out.println("Enter 1: Dollar");
+      System.out.println("Enter 2: Pound");
+ 
+      System.out.print("\nChoose from above options: ");
+      choice = sc.nextInt();
+ 
+      System.out.println("Enter the amount you want to convert?");
+      amount = sc.nextFloat();
+ 
+      switch (choice)
+      {
+         case 1:  // Dollar Conversion
+            rupee = amount * 70;
+            System.out.println(amount + " Dollar = " + f.format(rupee) + " Ruppes");
+ 
+            pound = amount *0.78;
+            System.out.println(amount + " Dollar = " + f.format(pound) + " Pound");
+ 
+            euro = amount *0.87;
+            System.out.println(amount + " Dollar = " + f.format(euro) + " Euro");
+ 
+            yen = amount *111.087;
+            System.out.println(amount + " Dollar = " + f.format(yen) + " Yen");
+ 
+            ringgit = amount *4.17;
+            System.out.println(amount + " Dollar = " + f.format(ringgit) + " ringgit");
+            break;
+ 
+         case 2:  // Pound Conversion
+            rupee = amount * 88;
+            System.out.println(amount + " pound = " + f.format(rupee) + " Ruppes");
+ 
+            dollar = amount *1.26;
+            System.out.println(amount + " pound = " + f.format(dollar) + " Dollar");
+ 
+            euro = amount *1.10;
+            System.out.println(amount + " pound = " + f.format(euro) + " Euro");
+ 
+            yen = amount *140.93;
+            System.out.println(amount + " pound = " + f.format(yen) + " Yen");
+ 
+            ringgit = amount *5.29;
+            System.out.println(amount + " pound = " + f.format(ringgit) + " ringgit");
+            break;
+ 
+ 
+          //Default case
+         default:
+            System.out.println("Invalid_Input");
+      }
+   }
+}
