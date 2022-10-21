@@ -1,0 +1,62 @@
+class Solution
+{
+    public int[] reverseSpiral(int R, int C, int[][] a)
+    {
+        // code here
+         ArrayList<Integer> al = new ArrayList<>();
+        int ans[]=new int[R*C];
+
+        // int row = matrix.length;
+        // int col = matrix[0].length;
+
+        int total = R * C;
+        int count = 0;
+
+        // initialise the indexes;
+        int startRow = 0;
+        int endCol = C - 1;
+        int endRow = R - 1;
+        int startCol = 0;
+
+        while(count < total){
+
+            //print startRow
+            for(int idx = startCol; count < total && idx <= endCol; idx++){
+                al.add(a[startRow][idx]);
+                count++;
+            }
+            startRow++;
+
+            // print lastCol
+            for(int idx = startRow; count < total && idx <= endRow; idx++){
+                al.add(a[idx][endCol]);
+                count++;
+            }
+            endCol--;
+
+            // print lastRow
+
+            for(int idx = endCol; count < total && idx >= startCol; idx--){
+                al.add(a[endRow][idx]);
+                count++;
+            }
+            endRow--;
+
+            // print firstCol
+
+            for(int idx = endRow; count < total && idx >= startRow; idx--){
+                al.add(a[idx][startCol]);
+                count++;
+            }
+            startCol++;
+        }
+        Collections.reverse(al);
+        int c=0;
+        for(int x : al)
+        {
+            ans[c++] = x;
+        }
+
+        return ans;
+    }
+}
