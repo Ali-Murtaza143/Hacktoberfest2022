@@ -5,17 +5,17 @@
  
 int main()
 {
-    int h, m, s;
+    int d, h, m, s;
      
-    h=m=s=0;
+    d=h=m=s=0;
  
     while(1)
     {
         //clear output screen
         system("clear");
          
-        //print time in HH : MM : SS format
-        printf("%02d : %02d : %02d ",h,m,s);
+        //print time in DD : HH : MM : SS format
+        printf("%02d : %02d : %02d : %02d ",d,h,m,s);
          
          //clear output buffer in gcc
         fflush(stdout);
@@ -23,7 +23,7 @@ int main()
          //increase s
         s++;
  
-        //update h,m and s
+        //update d,h,m and s
         if(s==60){
             m+=1;
             s=0;
@@ -33,6 +33,7 @@ int main()
             m=0;
         }
         if(h==24){
+            d+=1;
             h=0;
             m=0;
             s=0;
