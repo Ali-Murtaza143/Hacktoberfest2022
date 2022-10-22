@@ -1,0 +1,16 @@
+'''function that takes 2 arguments: 1 is the number of stairs to climb and 2 is the number of steps that can be climbed at a time, passed as a list. For example:
+climb_harder(4,[1,2,3,4]) would mean there are 4 steps that you can climb either 1 step at a time, 2 steps at a time, 3 steps at a time, or 4 steps at time. This function
+will determine how many possible ways there are to climb 4 steps given the number of steps that can be climbed at a time. For climb_harder(4,[1,2,3,4]), it would return 8
+because there are 8 possible ways to climb 4 steps if you can take 1,2,3, or 4 steps at a time.'''
+def climb_harder(stairs,steps):
+  #total counts the total number of combinations
+  total = 0
+  #base cases
+  if stairs < 0:
+    return 0
+  if stairs == 0:
+    return 1
+  for step in steps:
+    #recursively goes back for each number in the steps list
+    total += climb_harder(stairs-step,steps)
+  return total
