@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>Pie Chart</title>
+<style>
+.piechart {
+width: 300px;
+height: 300px;
+border-radius: 50%;
+background-color: antiquewhite;
+margin: auto;
+margin-top: 11rem;
+/* background: conic-gradient( red 140deg, orange 0deg 224deg, purple 0);*/
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="piechart">
+
+</div>
+<script>
+window.addEventListener("load", getData);
+function getData() {
+var total = 0;
+var data=[];
+var values = [23, 45, 21, 35, 88, 54,67 , 50, 12, 47];
+var len = values.length;
+for (var i = 0; i < len; i++) {
+total += values[i];
+}
+for (var i = 0; i < len; i++) {
+data[i] = values[i]*total/360;
+}
+console.log(data);
+
+
+
+createPieChart(values);
+}
+
+function createPieChart(values) {
+var colors = ["green", "red", "orange", "blue", "pink", "yellow", "black"];
+
+
+
+var total = 0;
+var pieChart = "";
+for (var i = 0; i < values.length - 1; i++) {
+var total = total + values[i];
+console.log(values[i])
+var x = Math.floor(Math.random() * 256);
+                var y = 100 + Math.floor(Math.random() * 256);
+                var z = 50 + Math.floor(Math.random() * 256);
+                var color = "rgb(" + x + "," + y + "," + z + ")";
+pieChart = pieChart + color + " 0deg" + " " + total + "deg, ";
+
+
+
+}
+pieChart = pieChart + "black 0";
+console.log(pieChart);
+document.getElementsByClassName("piechart")[0].style.background = "conic-gradient(" + pieChart + ")";
+}
+
+
+
+
+
+
+</script>
+<!--<script>
+
+
+
+await Excel.run(async (context) => {
+let sheet = context.workbook.worksheets.getActiveWorksheet();
+
+
+
+// Create the headers and format them to stand out.
+let headers = [
+["Product", "Quantity", "Unit Price", "Totals"]
+];
+let headerRange = sheet.getRange("B2:E2");
+headerRange.values = headers;
+headerRange.format.fill.color = "#4472C4";
+headerRange.format.font.color = "white";
+
+
+
+// Create the product data rows.
+let productData = [
+["Almonds", 6, 7.5],
+["Coffee", 20, 34.5],
+["Chocolate", 10, 9.56],
+];
+let dataRange = sheet.getRange("B3:D5");
+dataRange.values = productData;
+
+
+
+// Create the formulas to total the amounts sold.
+let totalFormulas = [
+["=C3 * D3"],
+["=C4 * D4"],
+["=C5 * D5"],
+["=SUM(E3:E5)"]
+];
+let totalRange = sheet.getRange("E3:E6");
+totalRange.formulas = totalFormulas;
+totalRange.format.font.bold = true;
+
+
+
+// Display the totals as US dollar amounts.
+totalRange.numberFormat = [["$0.00"]];
+
+
+
+await context.sync();
+});
+
+
+
+</script>-->
+</body>
+</html>
