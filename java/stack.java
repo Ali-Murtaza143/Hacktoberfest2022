@@ -82,6 +82,7 @@ class Stack {
     stack.pop();
     System.out.println("\nAfter popping out");
     stack.printStack();
+    
 
   }
 }
