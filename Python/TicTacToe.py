@@ -285,7 +285,7 @@ class Tic_Tac_Toe():
             print('Its a tie')
 
         return gameover
-
+# click function
     def click(self, event):
 
         grid_position = [event.x, event.y]
