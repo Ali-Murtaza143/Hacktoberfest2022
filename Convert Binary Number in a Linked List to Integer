@@ -1,0 +1,25 @@
+class Solution {
+public:
+    int getDecimalValue(ListNode* head) {
+        //first reverse the linked list and then keep multiplying with powers of 2y;
+        int l=0;
+        ListNode* x;
+        x=head;
+        while(x)
+        {
+            l++;
+            x=x->next;
+        }
+        
+        int s=0;
+        l=l-1;
+        x=head;
+        while(x)
+        {
+            s+=(x->val)*(pow(2,l));
+            l--;
+            x=x->next;
+        }
+        return s;
+    }
+};
